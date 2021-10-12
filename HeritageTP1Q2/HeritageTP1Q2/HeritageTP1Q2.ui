@@ -1,28 +1,185 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>HeritageTP1Q2Class</class>
- <widget class="QMainWindow" name="HeritageTP1Q2Class" >
-  <property name="objectName" >
-   <string notr="true">HeritageTP1Q2Class</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="HeritageTP1Q2Class">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>655</width>
+    <height>469</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>HeritageTP1Q2</string>
-  </property>  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="BoutonAfficheD">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Affiche la valeur du dé</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BoutonTireD">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tire le dé</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelJet">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>200</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#5555ff;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelD">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>90</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#5555ff;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BoutonJet">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>160</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nombre de Jets</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BoutonHisto">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Historique</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>475</x>
+      <y>101</y>
+      <width>151</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>655</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="HeritageTP1Q2.qrc"/>
+  <include location="HeritageTP1Q2.qrc"/>
  </resources>
- <connections/>
-</UI>
+ <connections>
+  <connection>
+   <sender>BoutonAfficheD</sender>
+   <signal>clicked()</signal>
+   <receiver>HeritageTP1Q2Class</receiver>
+   <slot>onBoutonDclicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BoutonTireD</sender>
+   <signal>clicked()</signal>
+   <receiver>HeritageTP1Q2Class</receiver>
+   <slot>onJet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BoutonJet</sender>
+   <signal>clicked()</signal>
+   <receiver>HeritageTP1Q2Class</receiver>
+   <slot>onBoutonJet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onBoutonDclicked()</slot>
+  <slot>onJet()</slot>
+  <slot>onBoutonJet()</slot>
+ </slots>
+</ui>
