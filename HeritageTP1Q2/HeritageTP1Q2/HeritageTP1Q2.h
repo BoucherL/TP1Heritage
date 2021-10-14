@@ -14,12 +14,13 @@ class HeritageTP1Q2 : public QMainWindow
 		
 public:
     HeritageTP1Q2(QWidget *parent = Q_NULLPTR);
-	int d;
-	int j;
-
+	int d;		//variable du dé
+	int n=0;	//variable de n jet
+	Ui::HeritageTP1Q2Class ui;
 private:
-    Ui::HeritageTP1Q2Class ui;
+    
 
 public slots:
 	void onBoutonDclicked();
+	void onJet();
 };
